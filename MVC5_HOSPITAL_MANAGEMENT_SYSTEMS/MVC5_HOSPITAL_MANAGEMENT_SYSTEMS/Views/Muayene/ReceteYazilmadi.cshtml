@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "ReceteYazilmadi";
+    Layout = "~/Views/Shared/_Personel.cshtml";
+}
+
+<br />
+<br />
+<br />
+
+<h2 class="container d-flex justify-content-center display-3 text-danger">Lütfen Receteyi yazdıktan sonra tıklayınız</h2>
+
+<div class="container d-flex justify-content-center">
+    @Html.ActionLink("Geri Dön", "Islem", "Muayene", null, new { @class = "btn btn-primary" })
+</div>

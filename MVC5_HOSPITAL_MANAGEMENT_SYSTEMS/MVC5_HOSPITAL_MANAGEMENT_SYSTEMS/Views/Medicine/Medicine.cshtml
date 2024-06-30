@@ -1,0 +1,95 @@
+﻿@using MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.Models
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<Medicine>
+@{
+    ViewBag.Title = "Medicine";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine</title>
+</head>
+<body>
+    <!--Search Bar-->
+    <div class="container-fluid page-body-wrapper">
+
+
+        <main class="content-wrapper">
+            <div class="page-header">
+                <h3 class="page-title"> CRUD işlemleri </h3>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Tables</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Basic tables</li>
+                    </ol>
+                </nav>
+            </div>
+            <div style="margin-bottom:25px;"></div>
+            <ul class="navbar-nav w-100">
+                <li class="nav-item w-100">
+                    @using (Html.BeginForm("Medicine", "Medicine", FormMethod.Get, new { @class = "nav-link mt-2 mt-md-0 d-none d-lg-flex search" }))
+                    {
+                        <div class="input-group ">
+                            @Html.TextBox("p", null, new { @class = "form-control form-input", placeholder = "Search anything..." })
+                            <button type="submit" class="btn btn-info">Ara</button>
+                        </div>
+                    }
+                </li>
+            </ul>
+
+
+
+            <div class="table-responsive-xxl">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>İlacın Adı</th>
+                            <th>İlaç Kodu</th>
+                            <th>İlaç Grubu</th>
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var med in Model)
+                        {
+                            <tr>
+                                <td>@med.MedicineID</td>
+                                <td>@med.Ad</td>
+                                <td>@med.Kod</td>
+                                <td>@med.Grup</td>
+
+
+                                <td>
+
+                                    @Html.ActionLink("Sil", "MedicineSil", "Medicine", new { id = med.MedicineID },
+                                    new { @class = "btn btn-danger", onclick = "return confirm('Silmek İstiyor Musunuz?')" })
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Güncelle", "MedicineGetir", "Medicine", new { id = med.MedicineID }, new
+                               {
+                                   @class = "btn btn-success"
+                               })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <!--PagedList-->
+
+                @Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("Medicine", new { sayfa }))
+
+            </div>
+            @Html.ActionLink("İlaç Ekle", "MedicineEkle", "Medicine",
+        new { @class = "btn btn-success" })
+        </main></div>
+</body>
+</html>
+

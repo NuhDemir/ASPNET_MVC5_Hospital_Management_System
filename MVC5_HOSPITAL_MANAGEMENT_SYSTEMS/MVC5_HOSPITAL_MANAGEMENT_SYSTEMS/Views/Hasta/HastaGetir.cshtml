@@ -1,0 +1,146 @@
+﻿@model MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.Models.Hasta
+@{
+    ViewBag.Title = "HastaGetir";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HastaGetir</title>
+</head>
+
+<body>
+    @using (Html.BeginForm("HastaGuncelle", "Hasta", FormMethod.Post))
+    {
+        <div style="margin-bottom:15px"></div>
+        <main class="container-fluid p-0">
+            <!--BAŞLIK-->
+            <div class="mb-3">
+                <h1 class="h2 d-inline align-middle" style="color:antiquewhite">HASTA GÜNCELLE</h1>
+            </div>
+            <!--HASTA ID-->
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">HASTA ID</h5>
+                        </div>
+                        <!--INPUT-->
+                        <div class="card-body">
+                            @Html.LabelFor(h => h.HastaID)
+                            @Html.TextBoxFor(h => h.HastaID, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--HASTA TCKNO-->
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">HASTA TCKNO</h5>
+                        </div>
+                        <!--INPUT-->
+                        <div class="card-body">
+                            @Html.LabelFor(h => h.TCKNO)
+                            @Html.TextBoxFor(h => h.TCKNO, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--HASTA ADI-->
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Adı</h5>
+                        </div>
+                        <!--INPUT-->
+                        <div class="card-body">
+                            @Html.LabelFor(h => h.Ad)
+                            @Html.TextBoxFor(h => h.Ad, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--HASTA SOYADI-->
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Soyadı</h5>
+                        </div>
+                        <!--INPUT-->
+                        <div class="card-body">
+                            @Html.LabelFor(h => h.Soyad)
+                            @Html.TextBoxFor(h => h.Soyad, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--HASTA YAŞI-->
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Yaşı</h5>
+                        </div>
+                        <!--INPUT-->
+                        <div class="card-body">
+                            @Html.LabelFor(h => h.Yas)
+                            @Html.TextBoxFor(h => h.Yas, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--HASTA TELEFON NUMARASI-->
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Telefon Numarası</h5>
+                        </div>
+                        <!--INPUT-->
+                        <div class="card-body">
+                            @Html.LabelFor(h => h.TelefonNo)
+                            @Html.TextBoxFor(h => h.TelefonNo, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--HASTA SİFRE-->
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Şifre</h5>
+                        </div>
+                        <!--INPUT-->
+                        <div class="card-body">
+                            @Html.LabelFor(h => h.Sifre)
+                            @Html.TextBoxFor(h => h.Sifre, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div>
+                <button class="btn btn-warning">Güncelle</button>
+            </div>
+
+        </main>
+    }
+</body>
+
+</html>

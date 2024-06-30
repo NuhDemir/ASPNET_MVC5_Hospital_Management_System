@@ -1,0 +1,46 @@
+﻿@using MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.Models
+@model MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.Models.Message
+
+@{
+    ViewBag.Title = "Iletisim";
+    Layout = "~/Views/Shared/_Anasayfa.cshtml";
+}
+
+<div class="container">
+    <div class="col-lg-8 mt-5 mt-lg-0">
+        @using (Html.BeginForm("IletisimEkle", "Anasayfa", FormMethod.Post))
+        {
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        @Html.TextBoxFor(m => m.Ad, new { @class = "form-control", placeholder = "Your Name" })
+                        @Html.ValidationMessageFor(m => m.Ad)
+                    </div>
+                    <div class="col-md-6 form-group mt-3 mt-md-0">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Your Email" })
+                        @Html.ValidationMessageFor(m => m.Email)
+                    </div>
+                </div>
+                <div class="form-group mt-3">
+                    @Html.TextBoxFor(m => m.Konu, new { @class = "form-control", placeholder = "Subject" })
+                    @Html.ValidationMessageFor(m => m.Konu)
+                </div>
+                <div class="form-group mt-3">
+                    @Html.TextAreaFor(m => m.Mesaj, new { @class = "form-control", placeholder = "Message", rows = 5 })
+                    @Html.ValidationMessageFor(m => m.Mesaj)
+                </div>
+                <div class="my-3">
+                    @if (TempData["SuccessMessage"] != null)
+                    {
+                        <div class="sent-message">@TempData["SuccessMessage"]</div>
+                    }
+                    @if (TempData["ErrorMessage"] != null)
+                    {
+                        <div class="error-message">@TempData["ErrorMessage"]</div>
+                    }
+                </div>
+                <div class="text-center"><button type="submit">Send Message</button></div>
+            </div>
+        }
+    </div>
+</div>

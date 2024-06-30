@@ -1,0 +1,68 @@
+﻿
+@using MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.Models
+@model ReceteVM
+
+@{
+    ViewBag.Title = "Recete";
+    Layout = "~/Views/Shared/_Personel.cshtml";
+}
+
+<h2 class="container display-3">Recete</h2>
+
+<div class="container">
+    @using (Html.BeginForm())
+    {
+
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Ilac Ekle:</span>
+            @Html.TextBoxFor(x => x.Recete.Ilac, new { @class = "form-control", placeholder = "İlac ismini giriniz", required = "required" })
+
+
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Ilac Ekle:</span>
+            @Html.TextBoxFor(x => x.Recete.Ilac2, new { @class = "form-control", placeholder = "İlac ismini giriniz" })
+
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Ilac Ekle:</span>
+            @Html.TextBoxFor(x => x.Recete.Ilac3, new { @class = "form-control", placeholder = "İlac ismini giriniz" })
+
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Ilac Ekle:</span>
+            @Html.TextBoxFor(x => x.Recete.Ilac4, new { @class = "form-control", placeholder = "İlac ismini giriniz" })
+
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Ilac Ekle:</span>
+            @Html.TextBoxFor(x => x.Recete.Ilac5, new { @class = "form-control", placeholder = "İlac ismini giriniz" })
+
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Ilac Ekle:</span>
+            @Html.TextBoxFor(x => x.Recete.Ilac6, new { @class = "form-control", placeholder = "İlac ismini giriniz" })
+
+        </div>
+        <div class="input-group mb-3">
+            @Html.HiddenFor(x => x.Hasta.HastaID)
+        </div>
+
+        <div class="input-group mb-3">
+            @Html.HiddenFor(x => x.Recete.ReceteNo)
+        </div>
+
+        <div class="input-group mb-3">
+            @Html.TextBoxFor(m => m.Recete.Verilis, DateTime.Now.ToString("yyyy-MM-dd"), new { @type = "date", required = "required" })
+
+        </div>
+
+
+
+        <!-- Button trigger modal -->
+        <input type="submit" value="Kaydet" class="btn btn-primary " />
+    }
+
+</div>
+

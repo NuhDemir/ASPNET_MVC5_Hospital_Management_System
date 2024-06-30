@@ -1,0 +1,119 @@
+﻿
+@{
+    ViewBag.Title = "Degerlerimiz";
+    Layout = "~/Views/Shared/_Anasayfa.cshtml";
+}
+
+
+<div class="container my-5">
+
+
+    <div class="text-center my-4">
+        <h1 class="fw-bold">DEĞERLER SAYFASINA HOŞGELDİNİZ</h1>
+    </div>
+
+    <div class="row">
+        <!-- Sol Kısım -->
+        <div class="col-lg-4 mb-3">
+            <div class="card text-white bg-primary">
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-primary">
+                            @Html.ActionLink("Önce İnsan", "Index", "Home", null, new { @class = "text-white", href = "https://onceinsander.org.tr/" })
+                        </li>
+                        <li class="list-group-item bg-primary">
+                            @Html.ActionLink("Empati kurmak ve empati yolları", "Index", "Home", null, new { @class = "text-white", href = "https://terappin.com/blog/empati-nedir" })
+                        </li>
+                        <li class="list-group-item bg-primary">
+                            @Html.ActionLink("Ulaşılabilir olmak", "Index", "Home", null, new { @class = "text-white", href = "https://safakkeklik.com/ulasilabilirlik.html" })
+                        </li>
+                        <li class="list-group-item bg-primary">
+                            @Html.ActionLink("Problem çözmek", "Index", "Home", null, new { @class = "text-white", href = "https://tr.wikipedia.org/wiki/Problem_%C3%A7%C3%B6zme" })
+                        </li>
+                        <li class="list-group-item bg-primary">
+                            @Html.ActionLink("Hasta ve çalışan memnuniyeti odaklı olmak", "Index", "Home", null, new { @class = "text-white", href = "https://dergipark.org.tr/tr/download/article-file/9312" })
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Orta Kısım -->
+        <div class="col-lg-4 mb-3">
+            <div class="card text-white bg-success">
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-success">
+                            @Html.ActionLink("Hasta ve çalışan güvenliği", "Index", "Home", null, new { @class = "text-white", href = "https://29mayisdh.saglik.gov.tr/TR-707932/hasta-calisan-guvenligi-yonetmeligi.html" })
+                        </li>
+                        <li class="list-group-item bg-success">
+                            @Html.ActionLink("Kalite ve güvenilirlik", "Index", "Home", null, new { @class = "text-white", href = "https://tip.baskent.edu.tr/kw/upload/464/dosyalar/cg/sempozyum/ogrsmpzsnm14/14.P2.pdf" })
+                        </li>
+                        <li class="list-group-item bg-success">
+                            @Html.ActionLink("Verimlilik", "Index", "Home", null, new { @class = "text-white", href = "https://ansiklopedi.tubitak.gov.tr/ansiklopedi/verimlilik" }), @Html.ActionLink("Bilimsellik", "Index", "Home", null, new { @class = "text-white", href = "http://arastirmarehberi.org/book/arastirma-rehberi/chapter/12-bilimsellik-nedir" })
+                        </li>
+                        <li class="list-group-item bg-success">
+                            @Html.ActionLink("İşbirliği ve ortak çalışma", "Index", "Home", null, new { @class = "text-white", href = "https://www.freeconference.com/tr/blog/the-importance-of-teamwork" })
+                        </li>
+                        <li class="list-group-item bg-success">
+                            @Html.ActionLink("Tıbbi deontoloji ve etiğe uyum", "Index", "Home", null, new { @class = "text-white", href = "https://www.ttb.org.tr/kutuphane/tibbi_etik_deontolojiyi_koruma.pdf" })
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sağ Kısım -->
+        <div class="col-lg-4 mb-3">
+            <div class="card text-white bg-info">
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-info">
+                            @Html.ActionLink("Dürüstlük", "Index", "Home", null, new { @class = "text-white", href = "https://tr.wikipedia.org/wiki/D%C3%BCr%C3%BCstl%C3%BCk" })
+                        </li>
+                        <li class="list-group-item bg-info">
+                            @Html.ActionLink("Bütüncül yaklaşım", "Index", "Home", null, new { @class = "text-white", href = "https://tr.wikipedia.org/wiki/B%C3%BCt%C3%BCnc%C3%BCl_yakla%C5%9F%C4%B1m" })
+                        </li>
+                        <li class="list-group-item bg-info">
+                            @Html.ActionLink("Adaletli olmak", "Index", "Home", null, new { @class = "text-white", href = "https://tr.wikipedia.org/wiki/Adalet" })
+                        </li>
+                        <li class="list-group-item bg-info">
+                            @Html.ActionLink("İş ahlakı ve sosyal sorumluluk", "Index", "Home", null, new { @class = "text-white", href = "https://dergipark.org.tr/tr/pub/baunsobed/issue/50356/652250" })
+                        </li>
+                        <li class="list-group-item bg-info">
+                            @Html.ActionLink("Yardımlaşma ve dayanışma", "Index", "Home", null, new { @class = "text-white", href = "https://adiyaman.edu.tr/tr/haberler/2020/05/08/yardimlasma-ve-dayanismanin-onemi" })
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="div_print">
+            <div class="page-content-body">
+                <div class="page-content-body-hc text-center">
+
+                    <h3 class="fw-bold">DEĞERLERİMİZ</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">Önce insan</li>
+                        <li class="list-group-item">Empati</li>
+                        <li class="list-group-item">Ulaşılabilir olmak</li>
+                        <li class="list-group-item">Problem çözmek</li>
+                        <li class="list-group-item">Hasta ve çalışan memnuniyeti odaklı</li>
+                        <li class="list-group-item">Hasta çalışan güvenliği</li>
+                        <li class="list-group-item">Kalite ve güvenilirlik</li>
+                        <li class="list-group-item">Bilimsellik, verimlilik</li>
+                        <li class="list-group-item">Tıbbi deontoloji ve etiğe uyum</li>
+                        <li class="list-group-item">Takım çalışması</li>
+                        <li class="list-group-item">Bütüncül yaklaşım</li>
+                        <li class="list-group-item">Şeffaflık</li>
+                        <li class="list-group-item">Hakkaniyet</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>

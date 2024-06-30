@@ -1,0 +1,169 @@
+﻿@model MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.Models.Doktor
+@{
+    ViewBag.Title = "DoktorGetir";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoktorGetir</title>
+</head>
+
+<body>
+ 
+        @using (Html.BeginForm("DoktorGuncelle", "Doktor", FormMethod.Post))
+        {
+            <div style="margin-bottom:15px"></div>
+            <main class="container-fluid p-0">
+                <!-- BAŞLIK -->
+                <div class="mb-3">
+                    <h1 class="h2 d-inline align-middle" style="color:antiquewhite">DOKTOR GÜNCELLE</h1>
+                </div>
+                <!-- DOKTOR ID -->
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">DOKTOR ID</h5>
+                            </div>
+                            <!-- INPUT -->
+                            <div class="card-body">
+                                @Html.LabelFor(d => d.DoktorID)
+                                @Html.TextBoxFor(D => D.DoktorID, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--DOKTOR POLİKLİNİK-->
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">DOKTOR POLİKLİNİK</h5>
+                            </div>
+                            <!--INPUT-->
+                            <div class="card-body">
+                                @Html.LabelFor(d => d.Poliklinik)
+                                @Html.TextBoxFor(d => d.Poliklinik, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--DOKTOR TCKNO-->
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">DOKTOR TCKNO</h5>
+                            </div>
+                            <!--INPUT-->
+                            <div class="card-body">
+                                @Html.LabelFor(d => d.TCKNO)
+                                @Html.TextBoxFor(d => d.TCKNO, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--DOKTOR ADI-->
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">DOKTOR ADI</h5>
+                            </div>
+                            <!--INPUT-->
+                            <div class="card-body">
+                                @Html.LabelFor(d => d.Ad)
+                                @Html.TextBoxFor(d => d.Ad, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--DOKTOR SOYADI-->
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">DOKTOR SOYADI</h5>
+                            </div>
+                            <!--INPUT-->
+                            <div class="card-body">
+                                @Html.LabelFor(d => d.Soyad)
+                                @Html.TextBoxFor(d => d.Soyad, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--DOKTOR YAŞI-->
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">DOKTOR YAŞI</h5>
+                            </div>
+                            <!--INPUT-->
+                            <div class="card-body">
+                                @Html.LabelFor(d => d.DogumTarihi)
+                                @Html.TextBoxFor(d => d.DogumTarihi, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--DOKTOR TELEFON NUMARASI-->
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">DOKTOR TELEFON NUMARASI</h5>
+                            </div>
+                            <!--INPUT-->
+                            <div class="card-body">
+                                @Html.LabelFor(d => d.TelefonNo)
+                                @Html.TextBoxFor(d => d.TelefonNo, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--DOKTOR SİFRE-->
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">DOKTOR SİFRE</h5>
+                            </div>
+                            <!--INPUT-->
+                            <div class="card-body">
+                                @Html.LabelFor(d => d.Sifre)
+                                @Html.TextBoxFor(d => d.Sifre, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br />
+                <div class="row">
+                    <div class="col-12">
+                        <button class="btn btn-warning">Güncelle</button>
+                        @Html.ActionLink("Cancel", "Doktor", "Doktor", null, new { @class = "btn btn-dark" })
+
+                    </div>
+
+                </div>
+
+            </main>
+        }
+    </body>
+
+
+</html>

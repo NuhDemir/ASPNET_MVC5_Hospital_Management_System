@@ -1,0 +1,86 @@
+﻿@using MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.Models
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<Message>
+
+@{
+    ViewBag.Title = "Iletisim";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="col-lg-12 grid-margin">
+    <div class="page-header">
+        <h3 class="page-title"> CRUD işlemleri </h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Tables</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Basic tables</li>
+            </ol>
+        </nav>
+</div>
+        <div style="margin-bottom:25px;"></div>
+        <ul class="navbar-nav w-100">
+            <li class="nav-item w-100">
+                @using (Html.BeginForm("Iletisim", "Admin", FormMethod.Get, new { @class = "nav-link mt-2 mt-md-0 d-none d-lg-flex search" }))
+                {
+                    <div class="input-group">
+                        @Html.TextBox("p", null, new { @class = "form-control form-input", placeholder = "Search anything..." })
+                        <button type="submit" class="btn btn-info">Ara</button>
+                    </div>
+                }
+            </li>
+        </ul>
+
+
+    @foreach (var m in Model)
+    {
+
+        <div class="col-12 grid-margin">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex flex-row justify-content-between">
+                        <h4 class="card-title">@m.MessageID</h4>
+                            </div>
+                    <div class="preview-list">
+                        <div class="preview-item border-bottom">
+                            <div class="preview-thumbnail">
+                                <img src="~/Content/assets/images/faces/face8.jpg" alt="image" class="rounded-circle" />
+                            </div>
+                            <div class="preview-item-content d-flex flex-grow">
+                                <div class="flex-grow">
+                                    <div class="d-flex d-md-block d-xl-flex justify-content-between">
+                                        <h6 class="preview-subject">@m.Ad</h6>
+                                        <p class="text-muted text-small">
+                                            @Html.ActionLink("Sil", "IletisimSil", "Admin", new { id = m.MessageID },
+new { @class = "btn btn-danger btn-sm", onclick = "return confirm('Silmek İstiyor Musunuz?')" })
+                                        </p>
+                                    </div>
+                                    <b>Konu</b>
+                                    <p class="text-muted">@m.Konu</p>
+                                    <br />
+                                    <b>Mesaj</b>
+                                    <p class="text-muted">@m.Mesaj</p>
+                                </div>
+                            </div>
+                        </div>
+               
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    }
+
+       
+        <div class="container">
+            <nav aria-label="Page navigation">
+                @Html.PagedListPager((IPagedList)Model, page => Url.Action("Iletisim", new { page }), new PagedListRenderOptions
+                {
+                    UlElementClasses = new[] { "pagination justify-content-center" },
+                    LiElementClasses = new[] { "page-item" },
+
+                })
+            </nav>
+        </div>
+    </div>

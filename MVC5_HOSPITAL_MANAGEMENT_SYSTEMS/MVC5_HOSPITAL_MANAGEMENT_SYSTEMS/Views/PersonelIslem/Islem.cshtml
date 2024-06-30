@@ -1,0 +1,54 @@
+﻿@using MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.Models
+@model List<Hasta>
+@{
+    ViewBag.Title = "Islem";
+    Layout = "~/Views/Shared/_Personel.cshtml";
+}
+<br />
+<h2 class="display-3 container">İşlem</h2>
+
+<div class="container table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Adı</th>
+                <th scope="col">Soyadı</th>
+                <th class="text-end" scope="col">Kan Sonucu Ekle</th>
+
+                <th class="text-end" scope="col">İdrar Sonucu Ekle</th>
+
+                <th class="text-end" scope="col">Radyaloji Sonucu Ekle</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.HastaID.</td>
+                    <td>@item.Ad</td>
+                    <td>@item.Soyad</td>
+                    <td class="text-end">
+                        <!-- Bu hücreyi sağa hizala -->
+                        @Html.ActionLink("KanSonucuekle", "KanSonucuekle", "PersonelIslem", new { id = item.HastaID }, new { @class = "btn btn-primary btn-sm" })
+                    </td>
+
+                    <td class="text-end">
+                        <!-- Bu hücreyi sağa hizala -->
+                        @Html.ActionLink("IdrarSonucuEkle", "IdrarSonucuEkle", "PersonelIslem", new { id = item.HastaID }, new { @class = "btn btn-primary btn-sm" })
+                    </td>
+
+                    <td class="text-end">
+                        <!-- Bu hücreyi sağa hizala -->
+                        @Html.ActionLink("RadyolojiSonucuEkle", "RadyolojiSonucuEkle", "PersonelIslem", new { id = item.HastaID }, new { @class = "btn btn-primary btn-sm" })
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

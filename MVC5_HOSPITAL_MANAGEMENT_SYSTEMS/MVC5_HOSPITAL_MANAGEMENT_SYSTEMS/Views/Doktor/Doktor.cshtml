@@ -1,0 +1,126 @@
+﻿@using MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.Models
+
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<Doktor>
+
+@{
+    ViewBag.Title = "Doktor";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doktor</title>
+</head>
+<body>
+    <div class="container-fluid page-body-wrapper">
+
+
+        <main class="content-wrapper">
+            <div class="page-header">
+                <h3 class="page-title"> CRUD işlemleri </h3>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Tables</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Basic tables</li>
+                    </ol>
+                </nav>
+            </div>
+            <div style="margin-bottom:25px;"></div>
+            <ul class="navbar-nav w-100">
+                <li class="nav-item w-100">
+                    @using (Html.BeginForm("Doktor", "Doktor", FormMethod.Get, new { @class = "nav-link mt-2 mt-md-0 d-none d-lg-flex search" }))
+                    {
+                        <div class="input-group ">
+                            @Html.TextBox("p", null, new { @class = "form-control form-input", placeholder = "Search anything..." })
+                            <button type="submit" class="btn btn-info">Ara</button>
+                        </div>
+                    }
+                </li>
+            </ul>
+
+
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>PROFİL</th>
+                            <th>POLİKLİNİK</th>
+                            <th>AD SOYAD</th>
+                            <th>ŞİFRE</th>
+                            <th>SİL</th>
+                            <th>GÜNCELLE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var d in Model)
+                        {
+                            <tr>
+                                <td>@d.DoktorID</td>
+                                <td><img src="~/Content/assets/images/faces/face4.jpg" class="img-fluid" /></td>
+                                <td>@d.Poliklinik</td>
+                                <td>@d.Ad &nbsp; @d.Soyad</td>
+                                <td>@d.Sifre</td>
+                                <td>
+                                    @Html.ActionLink("Sil", "DoktorSil", "Doktor", new { id = d.DoktorID }, new { @class = "btn btn-danger", onclick = "return confirm('Silmek İstiyor Musunuz?')" })
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Güncelle", "DoktorGetir", "Doktor", new { id = d.DoktorID }, new { @class = "btn btn-success" })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <!--PagedList-->
+            </div>
+            <div class="container-fluid">
+                @Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("Doktor", new { sayfa }))
+            </div>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <div style="margin-bottom:15px"></div>
+                        @Html.ActionLink("Doktor Ekle", "DoktorEkle", "Doktor", new { @class = "btn btn-info" })
+                    </li>
+                </ul>
+            </nav>
+
+        </main>
+    </div>
+    Doktorlar Sayfasına Hoşgeldiniz
+
+
+    <script src="~/Content/assets/js/bootstrap-table.js"></script>
+    <script>
+        Command: toastr["info"]("Doktorlar Sayfasına Hoşgeldiniz.", "Doktor")
+
+        toastr.options = {
+            "closeButton": false,
+            "debug": false,
+            "newestOnTop": true,
+            "progressBar": true,
+            "positionClass": "toast-bottom-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+    </script>
+    List<(DateTime Date, string SessionID, Toastr Toastr)>
+
+
+</body>
+
+</html>
+

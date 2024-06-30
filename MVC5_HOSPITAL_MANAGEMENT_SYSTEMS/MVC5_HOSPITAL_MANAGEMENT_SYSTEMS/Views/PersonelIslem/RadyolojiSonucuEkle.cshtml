@@ -1,0 +1,79 @@
+﻿@using MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.Models
+@model RadyolojiVM
+@{
+    ViewBag.Title = "RadyolojiSonucuEkle";
+    Layout = "~/Views/Shared/_Personel.cshtml";
+}
+
+
+<h2 class="container display-3">Radyoloji Sonucu Ekle</h2>
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>@Model.Hasta.Ad</th>
+                <th>@Model.Hasta.Soyad</th>
+            </tr>
+        </thead>
+    </table>
+    @using (Html.BeginForm())
+    {
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Özellik</th>
+                    <th>Değer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="input-group-text" id="basic-addon1">Test Açıklaması:</span></td>
+                    <td>@Html.TextBoxFor(x => x.RadyolojiSonuc.TestAciklama, new { @class = "form-control", required = "required" })</td>
+                    @Html.ValidationMessageFor(model => model.RadyolojiSonuc.TestAciklama, "", new { @class = "text-danger" })
+
+
+                </tr>
+                <tr>
+                    <td><span class="input-group-text" id="basic-addon1">Sonuç :</span></td>
+                    <td>@Html.TextBoxFor(x => x.RadyolojiSonuc.Sonuc, new { @class = "form-control", required = "required" })</td>
+                    @Html.ValidationMessageFor(model => model.RadyolojiSonuc.Sonuc, "", new { @class = "text-danger" })
+
+                </tr>
+
+            </tbody>
+        </table>
+
+        @Html.HiddenFor(x => x.Hasta.HastaID)
+        @Html.HiddenFor(x => x.RadyolojiSonuc.RadyolojiID)
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Değerleri Kaydet
+        </button>
+        @Html.ActionLink("Geri Dön", "Islem", "PersonelIslem", null, new { @class = "btn btn-warning" })
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Kan Değerlerini Kaydetme</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-bg-danger">
+                            Değerleri Doğru mu Girdiniz !! <br />
+                            Lütfen Kontrol Ediniz
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                        <input type="submit" value="Kaydet" class="btn btn-success" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,371 @@
+﻿@using MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.Models
+@model List<Yorum>
+
+@{
+    ViewBag.Title = "Anasayfa";
+    Layout = "~/Views/Shared/_Anasayfa.cshtml";
+}
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center">
+    <div class="container">
+        <h1>BARTIN DEVLET HASTANESİ</h1>
+        <h2>Sağlık herkesin hakkıdır, biz de sizin için buradayız! </h2>
+        <a href="#about" class="btn-get-started scrollto">Başlayın</a>
+    </div>
+</section><!-- End Hero -->
+
+<main id="main">
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-4 d-flex align-items-stretch">
+                    <div class="content">
+                        <h3>Neden Bartın Devlet Hastanesi?</h3>
+                        <p>
+                            Uzman kadrosu ve modern tıbbi ekipmanlarıyla sağlık alanında öncü bir kuruluştur. Size en iyi sağlık
+                            hizmetini sunmak için sürekli yenilenen ve gelişen bir yapıya sahibiz. Size ve sevdiklerinize en iyi
+                            bakımı sunmak için buradayız
+                        </p>
+                        <div class="text-center">
+                            <a href="@Url.Action("AmacveHedeflerimiz","Anasayfa")" class="more-btn">Devamı</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 d-flex align-items-stretch">
+                    <div class="icon-boxes d-flex flex-column justify-content-center">
+                        <div class="icon-boxes d-flex flex-column justify-content-center">
+                            <div class="row">
+                                <div class="col-xl-4 d-flex align-items-stretch">
+                                    <div class="icon-box mt-4 mt-xl-0">
+                                        <i class="bx bx-heart"></i>
+                                        <h4>Evde Sağlık</h4>
+                                        <p>Hızlı ve etkili acil sağlık hizmetlerimizi keşfedin.</p>
+                                        <div class="text-center">
+                                            <a href="@Url.Action("EvdeSaglik","Anasayfa")" class="more-btn">Daha Fazla</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 d-flex align-items-stretch">
+                                    <div class="icon-box mt-4 mt-xl-0">
+                                        <i class="bx bx-calendar-plus"></i>
+                                        <h4>Diyabet Okulu</h4>
+                                        <p>Setifika ve eğitim hizmetlerimizi öğrenin.</p>
+                                        <a href="@Url.Action("DiyabetOkulu","Anasayfa")" class="more-btn">Daha Fazla</a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 d-flex align-items-stretch">
+                                    <div class="icon-box mt-4 mt-xl-0">
+                                        <i class="bx bx-plus-medical"></i>
+                                        <h4>Diyaliz Ünitesi</h4>
+                                        <p>Güvenli ve modern Diyaliz olanaklarımız hakkında bilgi edinin.</p>
+
+                                        <a href="@Url.Action("DiyalizUnitesi","Anasayfa")" class="more-btn">Daha Fazla</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End .content-->
+                    </div>
+                </div>
+                </div>
+            </div>
+    </section><!-- End Why Us Section -->
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
+                    <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a>
+                </div>
+
+                <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+                    <h3>Alanında Uzman Kadromuz İle Siz Değerli Bartın Halkının Hizmetindeyiz</h3>
+                    <p>Her biri alanında uzman, bilinçli çalışma arkadaşlarımızla ile hizmetinizdeyiz.</p>
+
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-fingerprint"></i></div>
+                        <h4 class="title"><a href="">Bilgileriniz bizimle güvende</a></h4>
+                        <p class="description">Hastanemizin değerleri çerçevesinde hasta yakınları dışında hiçbir kimseye yasalar gereğince bilgi verilmemektedir</p>
+                    </div>
+
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-atom"></i></div>
+                        <h4 class="title"><a href="">Teknolojik Laboratuvarlarımız</a></h4>
+                        <p class="description">Son teknolojiye sahip laboratuvarlarımız ile en doğru ve güvenilir sonuçları elde ediyoruz.</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End About Section -->
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="count-box">
+                        <i class="fas fa-user-md"></i>
+                        <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="1" class="purecounter"></span>
+                        <p>Doktorlarımız</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+                    <div class="count-box">
+                        <i class="far fa-hospital"></i>
+                        <span data-purecounter-start="0" data-purecounter-end="18" data-purecounter-duration="1" class="purecounter"></span>
+                        <p>Tıbbi Birimlerimiz</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                    <div class="count-box">
+                        <i class="fas fa-flask"></i>
+                        <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1" class="purecounter"></span>
+                        <p>Laboratuvarlarımız</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                    <div class="count-box">
+                        <i class="fas fa-award"></i>
+                        <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1" class="purecounter"></span>
+                        <p>Ödüllerimiz</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Counts Section -->
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+        <div class="container">
+
+
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="icon-box">
+                        <div class="icon"><i class="fas fa-heartbeat"></i></div>
+                        <h4><a href="@Url.Action("Tarihcemiz","Anasayfa")">Tarihçemiz</a></h4>
+                        <p>Bartın Devlet Hastanesi, kaliteli hizmet anlayışıyla sağlık alanında öncü olmaya devam ediyor.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="icon-box">
+                        <div class="icon"><i class="fas fa-pills"></i></div>
+                        <h4><a href="@Url.Action("KonusmaTerapi","Anasayfa")">Konuşma Terapi</a></h4>
+                        <p>Terapi yöntemlerimizle hastalarımıza daha sağlıklı bir yaşam sürmenizi sağlıyoruz.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                    <div class="icon-box">
+                        <div class="icon"><i class="fas fa-hospital-user"></i></div>
+                        <h4><a href="@Url.Action("Degerlerimiz","Anasayfa")">Değerlerimiz</a></h4>
+                        <p>İlham veren hizmet anlayışımızla Bartın Hastanesi'nde sizlere daima en iyisini sunuyoruz.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                    <div class="icon-box">
+                        <div class="icon"><i class="fas fa-dna"></i></div>
+                        <h4><a href="@Url.Action("EvdeSaglik","Anasayfa")">Evde Sağlık</a></h4>
+                        <p>Sizlere modern ve kaliteli sağlık hizmetleri sunmaktan gurur duyuyoruz.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                    <div class="icon-box">
+                        <div class="icon"><i class="fas fa-wheelchair"></i></div>
+                        <h4><a href="@Url.Action("Palyatif","Anasayfa")">Palyatif</a></h4>
+                        <p>Bartın Devlet Hastanesi olarak bakım ve destek konusunda her zaman yanınızdayız.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                    <div class="icon-box">
+                        <div class="icon"><i class="fas fa-notes-medical"></i></div>
+                        <h4><a href="@Url.Action("Doktorlarimiz","Anasayfa")">Doktorlarımız</a></h4>
+                        <p>Hastanemizin deneyimli ve uzman kadrosu sağlık için sizleri bekliyor...</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- End Services Section -->
+    <!-- ======= Frequently Asked Questions Section ======= -->
+
+    <section id="faq" class="faq section-bg">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Sıkça sorulan sorular</h2>
+                <p>Bartın Devlet Hastanesi ile ilgili sıkça sorulan soruların cevapları aşağıda bulunmaktadır.</p>
+            </div>
+
+            <div class="faq-list">
+                <ul>
+                    <li data-aos="fade-up">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse"
+                                                                       data-bs-target="#faq-list-1">
+                            Bartın Devlet Hastanesi nerede bulunmaktadır? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>
+                        </a>
+                        <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                            <p>Bartın Devlet Hastanesi, Bartın şehir merkezinde bulunmaktadır.</p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="100">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2"
+                                                                       class="collapsed">
+                            Bartın Devlet Hastanesi hangi hizmetleri sunmaktadır? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>
+                        </a>
+                        <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                            <p>Bartın Devlet Hastanesi, acil servis, poliklinikler, ameliyat hizmetleri, radyoloji ve görüntüleme, laboratuvar hizmetleri, rehabilitasyon ve fizik tedavi, psikiyatrik danışmanlık, aşı ve koruyucu sağlık hizmetleri gibi çeşitli sağlık hizmetleri sunmaktadır.</p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="200">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3"
+                                                                       class="collapsed">
+                            Randevu nasıl alınır? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>
+                        </a>
+                        <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                            <p>Randevu almak için internet üzerinden ya da telefonla iletişime geçerek randevu talebinde bulunabilirsiniz. Ayrıca hastanemize gelerek de randevu alabilirsiniz.</p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="300">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4"
+                                                                       class="collapsed">
+                            Hangi branşlarda doktorlar bulunmaktadır? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>
+                        </a>
+                        <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                            <p>Bartın Devlet Hastanesi'nde dahiliye, cerrahi, pediatri, ortopedi, kardiyoloji, göz hastalıkları, kulak burun boğaz, dermatoloji, nöroloji, ve daha birçok branşta uzman doktorlar bulunmaktadır.</p>
+                        </div>
+                    </li>
+
+                    <li data-aos="fade-up" data-aos-delay="400">
+                        <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5"
+                                                                       class="collapsed">
+                            Hangi saatlerde hizmet verilmektedir? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>
+                        </a>
+                        <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                            <p>Bartın Devlet Hastanesi, haftanın her günü 24 saat boyunca hizmet vermektedir.</p>
+                        </div>
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+        </div>
+    </section><!-- End Frequently Asked Questions Section -->
+    <!-- =======YORUMLAR ======= -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+
+            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                <div class="swiper-wrapper">
+                    @foreach (var y in Model)
+                    {
+                        <div class="swiper-slide">
+                            <div class="testimonial-wrap">
+                                <div class="testimonial-item">
+
+                                    <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                                    <h3>@y.Ad @y.Soyad</h3>
+                                    <h4>@y.Meslek</h4>
+                                    <p>
+                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                        @y.Mesaj
+                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>}<!-- End testimonial item -->
+
+
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
+    </section><!-- End Testimonials Section -->
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>İletişim</h2>
+                <p>
+
+                </p>
+            </div>
+        </div>
+
+        <div>
+            <iframe style="border:0; width: 100%; height: 350px;"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+                    frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="container">
+            <div class="row mt-5">
+
+                <div class="col-lg-4">
+                    <div class="info">
+                        <div class="address">
+                            <i class="bi bi-geo-alt"></i>
+                            <h4>Adres:</h4>
+                            <p>Tuna Mahallesi 846. Cadde No:15 74100 Merkez/Bartın</p>
+                        </div>
+
+                        <div class="email">
+                            <i class="bi bi-envelope"></i>
+                            <h4>Email:</h4>
+                            <p>saglikbakanligi@gmail.com</p>
+                        </div>
+
+                        <div class="phone">
+                            <i class="bi bi-phone"></i>
+                            <h4>Telefon:</h4>
+                            <p>+90 378 227 76 20 - 21 - 22 - 23</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <section id="services" class="services">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 ">
+                        <div class="icon-box">
+                            <div class="icon"><i class="fas fa-message"></i></div>
+                            <h4><a href="@Url.Action("IletisimEkle","Anasayfa")">İletişim Kutusu</a></h4>
+                            <p>Web sitemiz ya da hastanemiz ile alakalı istek veya şikayetlerinizi buradan bizlere iletebilirsiniz.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </section><!-- End Contact Section -->
+</main>
+

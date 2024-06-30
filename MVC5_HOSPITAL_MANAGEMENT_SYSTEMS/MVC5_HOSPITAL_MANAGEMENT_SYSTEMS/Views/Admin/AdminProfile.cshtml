@@ -1,0 +1,72 @@
+﻿@using MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.Models
+@model List<Admin>
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<head>
+    <link href="~/Content/assets/css/profile.css" rel="stylesheet" />
+</head>
+
+<div class="box">
+    <div id="overlay">
+        <div class="image">
+            <div class="trick">
+
+            </div>
+        </div>
+        <ul class="text">aDMİN</ul>
+        <div class="text1">CTIS</div>
+
+
+
+
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <div class="title btn btn-danger btn-outline btn-lg">HAKKIMDA</div>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading">
+                    <div class="panel-body">
+                        Bu kısım güncellenecektir.
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <div class="title btn btn-danger btn-outline btn-lg">BİLGİLER</div>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                       Bu kısım güncellenecektir.    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading " role="tab" id="headingThree">
+                    <h4 class="panel-title ">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="" aria-controls="collapseThree">
+                            <div class="title  btn btn-danger btn-outline btn-lg">İLETİŞİM</div>
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                       Bu kısım Güncellenecektir.     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

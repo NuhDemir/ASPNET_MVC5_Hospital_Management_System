@@ -1,0 +1,71 @@
+﻿@model MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.Models.Hasta
+
+@{
+    Layout = "~/Views/Shared/_Anasayfa.cshtml";
+    ViewBag.Title = "Randevu Düzenle";
+}
+
+
+<div class="container mt-5" style="max-width: 1000px; margin: 0 auto; padding-top: 50px; padding-bottom: 100px;">
+    <h2>Randevu Düzenle</h2>
+    <hr />
+    @using (Html.BeginForm("RandevuDuzenle", "Randevu", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        <div class="form-group">
+            @Html.LabelFor(model => model.TCKNO, new { @class = "control-label" })
+            @Html.TextBoxFor(model => model.TCKNO, new { @class = "form-control", @readonly = "readonly" })
+            @Html.ValidationMessageFor(model => model.TCKNO, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Ad, new { @class = "control-label" })
+            @Html.TextBoxFor(model => model.Ad, new { @class = "form-control", @readonly = "readonly" })
+            @Html.ValidationMessageFor(model => model.Ad, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Soyad, new { @class = "control-label" })
+            @Html.TextBoxFor(model => model.Soyad, new { @class = "form-control", @readonly = "readonly" })
+            @Html.ValidationMessageFor(model => model.Soyad, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Poliklinik, new { @class = "control-label" })
+            @Html.TextBoxFor(model => model.Poliklinik, new { @class = "form-control", @readonly = "readonly" })
+            @Html.ValidationMessageFor(model => model.Poliklinik, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Doktor, new { @class = "control-label", @readonly = "readonly" })
+            @Html.TextBoxFor(model => model.Doktor, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Doktor, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Mesaj, new { @class = "control-label" })
+            @Html.TextBoxFor(model => model.Mesaj, new { @class = "form-control", @readonly = "readonly" })
+            @Html.ValidationMessageFor(model => model.Mesaj, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.AlısTarih, new { @class = "control-label" })
+            @Html.TextBoxFor(model => model.AlısTarih, "{0:yyyy-MM-ddTHH:mm}", new { @class = "form-control", type = "datetime-local" })
+            @Html.ValidationMessageFor(model => model.AlısTarih, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.TelefonNo, new { @class = "control-label" })
+            @Html.TextBoxFor(model => model.TelefonNo, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.TelefonNo, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Kaydet" class="btn btn-primary" />
+            @Html.ActionLink("İptal", "RandevuGoster", null, new { @class = "btn btn-default" })
+        </div>
+    }
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

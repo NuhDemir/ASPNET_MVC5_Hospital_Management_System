@@ -1,0 +1,51 @@
+﻿@model MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.Models.Medicine
+@{
+    ViewBag.Title = "MedicineEkle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<link href="~/Content/assets/vendors/select2-bootstrap-theme/select2-bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/assets/vendors/select2/select2.min.css" rel="stylesheet" />
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">İlaç Ekleme Formu</h4>
+            <p class="card-description">Gerekli bilgileri giriniz... </p>
+
+
+            @using (Html.BeginForm("MedicineEkle", "Medicine", FormMethod.Post))
+            {
+
+
+
+                <div class="form-group">
+                    <label for="exampleInputName1">İlaç Adı</label>
+                    @Html.TextBoxFor(med => med.Ad, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(med => med.Ad)
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputName1">İlaç Kodu</label>
+                    @Html.TextBoxFor(med => med.Kod, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(med => med.Kod)
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputName1">İlaç Grubu</label>
+                    @Html.TextBoxFor(med => med.Grup, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(med => med.Grup)
+                </div>
+
+
+                <button class="btn btn-info">İlaç Ekle</button>
+        
+                @Html.ActionLink("Cancel", "Medicine", "Medicine", null, new { @class = "btn btn-dark" })
+
+            }
+        </div>
+    </div>
+</div>
+<script src="~/Content/assets/vendors/select2/select2.min.js"></script>
+<script src="~/Content/assets/vendors/typeahead.js/typeahead.bundle.min.js"></script>
+
+<script src="~/Content/assets/js/select2.js"></script>
+<script src="~/Content/assets/js/typeahead.js"></script>
+<script src="~/Content/assets/js/file-upload.js"></script>

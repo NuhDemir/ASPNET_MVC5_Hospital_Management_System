@@ -1,0 +1,94 @@
+﻿@using MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.Models
+@model IdrarVM
+@{
+    ViewBag.Title = "IdrarSonucuEkle";
+    Layout = "~/Views/Shared/_Personel.cshtml";
+}
+
+<h2 class="container display-3">İdrar Sonucu Ekle</h2>
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>@Model.Hasta.Ad</th>
+                <th>@Model.Hasta.Soyad</th>
+            </tr>
+        </thead>
+    </table>
+    @using (Html.BeginForm())
+    {
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Özellik</th>
+                    <th>Değer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="input-group-text" id="basic-addon1">Dansite:</span></td>
+                    <td>@Html.TextBoxFor(x => x.IdrarSonuc.Dansite, new { @class = "form-control", required = "required", type = "number" })</td>
+                    @Html.ValidationMessageFor(model => model.IdrarSonuc.Dansite, "", new { @class = "text-danger" })
+
+                </tr>
+                <tr>
+                    <td><span class="input-group-text" id="basic-addon1">PH:</span></td>
+                    <td>@Html.TextBoxFor(x => x.IdrarSonuc.PH, new { @class = "form-control", required = "required", type = "number" })</td>
+                    @Html.ValidationMessageFor(model => model.IdrarSonuc.PH, "", new { @class = "text-danger" })
+
+                </tr>
+                <tr>
+                    <td><span class="input-group-text" id="basic-addon1">Eritrosit:</span></td>
+                    <td>@Html.TextBoxFor(x => x.IdrarSonuc.Eritrosit, new { @class = "form-control", required = "required", type = "number" })</td>
+                    @Html.ValidationMessageFor(model => model.IdrarSonuc.Eritrosit, "", new { @class = "text-danger" })
+
+                </tr>
+                <tr>
+                    <td><span class="input-group-text" id="basic-addon1">Lokosit:</span></td>
+                    <td>@Html.TextBoxFor(x => x.IdrarSonuc.Lokosit, new { @class = "form-control", required = "required", type = "number" })</td>
+                    @Html.ValidationMessageFor(model => model.IdrarSonuc.Lokosit, "", new { @class = "text-danger" })
+
+                </tr>
+                <tr>
+                    <td><span class="input-group-text" id="basic-addon1">Epitel:</span></td>
+                    <td>@Html.TextBoxFor(x => x.IdrarSonuc.Epitel, new { @class = "form-control", required = "required", type = "number" })</td>
+                    @Html.ValidationMessageFor(model => model.IdrarSonuc.Epitel, "", new { @class = "text-danger" })
+
+                </tr>
+            </tbody>
+        </table>
+
+        @Html.HiddenFor(x => x.Hasta.HastaID)
+        @Html.HiddenFor(x => x.IdrarSonuc.IdrarID)
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Değerleri Kaydet
+        </button>
+        @Html.ActionLink("Geri Dön", "Islem", "PersonelIslem", null, new { @class = "btn btn-warning" })
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">İdrar Değerlerini Kaydetme</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-bg-danger">
+                            Değerleri Doğru mu Girdiniz !! <br />
+                            Lütfen Kontrol Ediniz
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                        <input type="submit" value="Kaydet" class="btn btn-success" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+

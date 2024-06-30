@@ -1,0 +1,101 @@
+﻿@model MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.Models.Yorum
+@{
+    ViewBag.Title = "YorumGetir";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YorumGetir</title>
+</head>
+
+<body>
+    <div class="container mt-4">
+        @using (Html.BeginForm("YorumGuncelle", "Admin", FormMethod.Post))
+        {
+            <div class="mb-3">
+                <h1 class="h2 text-center text-light">Yorum Güncelle</h1>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-12 col-lg-6 mx-auto">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Yorum ID</h5>
+                        </div>
+                        <div class="card-body">
+                            @Html.LabelFor(y => y.YorumID, new { @class = "form-label" })
+                            @Html.TextBoxFor(y => y.YorumID, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-12 col-lg-6 mx-auto">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Adı</h5>
+                        </div>
+                        <div class="card-body">
+                            @Html.LabelFor(y => y.Ad, new { @class = "form-label" })
+                            @Html.TextBoxFor(y => y.Ad, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-12 col-lg-6 mx-auto">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Soyadı</h5>
+                        </div>
+                        <div class="card-body">
+                            @Html.LabelFor(y => y.Soyad, new { @class = "form-label" })
+                            @Html.TextBoxFor(y => y.Soyad, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-12 col-lg-6 mx-auto">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Meslek</h5>
+                        </div>
+                        <div class="card-body">
+                            @Html.LabelFor(y => y.Meslek, new { @class = "form-label" })
+                            @Html.TextBoxFor(y => y.Meslek, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-12 col-lg-6 mx-auto">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Mesaj</h5>
+                        </div>
+                        <div class="card-body">
+                            @Html.LabelFor(y => y.Mesaj, new { @class = "form-label" })
+                            @Html.TextBoxFor(y => y.Mesaj, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-warning">Güncelle</button>
+            </div>
+        }
+    </div>
+</body>
+
+</html>

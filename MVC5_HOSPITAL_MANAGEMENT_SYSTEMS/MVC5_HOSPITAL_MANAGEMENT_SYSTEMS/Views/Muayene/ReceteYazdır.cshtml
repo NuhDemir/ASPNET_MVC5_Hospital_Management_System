@@ -1,0 +1,84 @@
+﻿@using MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.Models
+@model Recete
+@{
+    ViewBag.Title = "ReceteYazdır";
+    Layout = "~/Views/Shared/_Personel.cshtml";
+}
+
+<style>
+    @@media print {
+        .no-print {
+            display: none;
+        }
+    }
+</style>
+
+<div class="container d-flex justify-content-end no-print">
+    @Html.ActionLink("Geri Dön", "Islem", "Muayene", null, new { @class = "btn btn-primary", })
+</div>
+
+<h2 class="container d-flex justify-content-center display-3 text-success">Reçete No :  @Model.ReceteNo</h2>
+<h2 class="container d-flex justify-content-center display-5 ">Veriliş Tarihi :  @Model.Verilis.Year/@Model.Verilis.Month/@Model.Verilis.Day</h2>
+
+<br />
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>İlaç No</th>
+                        <th>İlaç İsmi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Ilac != null)
+                    {
+                        <tr>
+                            <td>1</td>
+                            <td>@Model.Ilac</td>
+                        </tr>
+                    }
+                    @if (Model.Ilac2 != null)
+                    {
+                        <tr>
+                            <td>2</td>
+                            <td>@Model.Ilac2</td>
+                        </tr>
+                    }
+                    @if (Model.Ilac3 != null)
+                    {
+                        <tr>
+                            <td>3</td>
+                            <td>@Model.Ilac3</td>
+                        </tr>
+                    }
+                    @if (Model.Ilac4 != null)
+                    {
+                        <tr>
+                            <td>4</td>
+                            <td>@Model.Ilac4</td>
+                        </tr>
+                    }
+                    @if (Model.Ilac5 != null)
+                    {
+                        <tr>
+                            <td>5</td>
+                            <td>@Model.Ilac5</td>
+                        </tr>
+                    }
+                    @if (Model.Ilac6 != null)
+                    {
+                        <tr>
+                            <td>6</td>
+                            <td>@Model.Ilac6</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <div class="text-center no-print">
+                <button onclick="window.print()" class="btn btn-primary mt-3">Sayfayı Yazdır</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,207 @@
+﻿@using MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.Models
+@model MuayeneVM
+@{
+    Layout = "~/Views/Shared/_Personel.cshtml";
+}
+<h2 class="container">Sonuc Ekranı</h2>
+<div class="container d-flex justify-content-end">
+    @Html.ActionLink("Geri Dön", "Islem", "Muayene", null, new { @class = "btn btn-primary" })
+</div>
+<br />
+<table class="table table-striped container">
+    <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+        <tr>
+            <th scope="col">@Model.hasta.Ad</th>
+            <th scope="col">@Model.hasta.Soyad</th>
+            <th scope="col">Şikayet</th>
+        </tr>
+    </thead>
+</table>
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">Kan Sonuçları</h4>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Test Adı</th>
+                                    <th scope="col">Sonuç</th>
+                                    <th scope="col">Birim</th>
+                                    <th scope="col">Referans Değeri</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        @if (Model.kanSonucları != null)
+                        {
+                            <table class="table">
+                                <tbody>
+                                    <tr class="@(Model.kanSonucları.Demir >= 33 && Model.kanSonucları.Demir <= 193 ? "table-success" : "table-danger")">
+                                        <th scope="col">Demir</th>
+                                        <td>@Model.kanSonucları.Demir</td>
+                                        <td>ug/dL</td>
+                                        <td>33-193</td>
+                                    </tr>
+                                    <tr class="@(Model.kanSonucları.CRP >= 0 && Model.kanSonucları.CRP <= 5 ? "table-success" : "table-danger")">
+                                        <th scope="col">CRP</th>
+                                        <td>@Model.kanSonucları.CRP</td>
+                                        <td>mg/L</td>
+                                        <td>0-5</td>
+                                    </tr>
+                                    <tr class="@(Model.kanSonucları.Granulosit >= 1.2 && Model.kanSonucları.Granulosit <= 8 ? "table-success" : "table-danger")">
+                                        <th scope="col">GRAN</th>
+                                        <td>@Model.kanSonucları.Granulosit</td>
+                                        <td>10<sup>3</sup>/uL</td>
+                                        <td>1,2-8</td>
+                                    </tr>
+                                    <tr class="@(Model.kanSonucları.Lenfosit >= 0.5 && Model.kanSonucları.Lenfosit <= 5 ? "table-success" : "table-danger")">
+                                        <th scope="col">LYM</th>
+                                        <td>@Model.kanSonucları.Lenfosit</td>
+                                        <td>10<sup>3</sup>/uL</td>
+                                        <td>0,5-5</td>
+                                    </tr>
+                                    <tr class="@(Model.kanSonucları.Eritrosit >= 3.5 && Model.kanSonucları.Eritrosit <= 5.5 ? "table-success" : "table-danger")">
+                                        <th scope="col">RBC</th>
+                                        <td>@Model.kanSonucları.Eritrosit</td>
+                                        <td>10<sup>6</sup>/uL</td>
+                                        <td>3,5-5,5</td>
+                                    </tr>
+                                    <tr class="@(Model.kanSonucları.Hemoglobin >= 11.5 && Model.kanSonucları.Hemoglobin <= 16.5 ? "table-success" : "table-danger")">
+                                        <th scope="col">HGB</th>
+                                        <td>@Model.kanSonucları.Hemoglobin</td>
+                                        <td>g/dL</td>
+                                        <td>11,5-16,5</td>
+                                    </tr>
+                                    <tr class="@(Model.kanSonucları.Hemotokrit >= 35 && Model.kanSonucları.Hemotokrit <= 55 ? "table-success" : "table-danger")">
+                                        <th scope="col">HCT</th>
+                                        <td>@Model.kanSonucları.Hemotokrit</td>
+                                        <td>%</td>
+                                        <td>35-55</td>
+                                    </tr>
+                                    <tr class="@(Model.kanSonucları.Trombosit >= 100 && Model.kanSonucları.Trombosit <= 400 ? "table-success" : "table-danger")">
+                                        <th scope="col">PLT</th>
+                                        <td>@Model.kanSonucları.Trombosit</td>
+                                        <td>10<sup>3</sup>/uL</td>
+                                        <td>100-400</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        }
+                        else
+                        {
+                            <p>Sonuç Bulunamadı</p>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">İdrar Sonuçları</h4>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Test Adı</th>
+                                <th scope="col">Sonuç</th>
+                                <th scope="col">Birim</th>
+                                <th scope="col">Referans Değeri</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <ul class="list-group list-group-flush">
+                        @if (Model.IdrarSonucları != null)
+                        {
+                            <table class="table">
+                                <tbody>
+                                    <tr class="@(Model.IdrarSonucları.Dansite >= 1005 && Model.IdrarSonucları.Dansite <= 1030 ? "table-success" : "table-danger")">
+                                        <th scope="col">Dansite</th>
+                                        <td>@Model.IdrarSonucları.Dansite</td>
+                                        <td>-</td>
+                                        <td>1005-1030</td>
+                                    </tr>
+                                    <tr class="@(Model.IdrarSonucları.PH >= 5.5 && Model.IdrarSonucları.PH <= 8 ? "table-success" : "table-danger")">
+                                        <th scope="col">PH</th>
+                                        <td>@Model.IdrarSonucları.PH</td>
+                                        <td>-</td>
+                                        <td>5,5-8</td>
+                                    </tr>
+                                    <tr class="@(Model.IdrarSonucları.Eritrosit >= 0 && Model.IdrarSonucları.Eritrosit <= 3 ? "table-success" : "table-danger")">
+                                        <th scope="col">Eritrosit</th>
+                                        <td>@Model.IdrarSonucları.Eritrosit</td>
+                                        <td>HPF</td>
+                                        <td>0-3</td>
+                                    </tr>
+                                    <tr class="@(Model.IdrarSonucları.Lokosit >= 0 && Model.IdrarSonucları.Lokosit <= 4 ? "table-success" : "table-danger")">
+                                        <th scope="col">Lokosit</th>
+                                        <td>@Model.IdrarSonucları.Lokosit</td>
+                                        <td>HPF</td>
+                                        <td>0-4</td>
+                                    </tr>
+                                    <tr class="@(Model.IdrarSonucları.Epitel >= 0 && Model.IdrarSonucları.Epitel <= 5 ? "table-success" : "table-danger")">
+                                        <th scope="col">Epitel</th>
+                                        <td>@Model.IdrarSonucları.Epitel</td>
+                                        <td>-</td>
+                                        <td>0-5</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        }
+                        else
+                        {
+                            <p>Sonuç Bulunamadı</p>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">Radyoloji Sonuçları</h4>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Test Adı</th>
+                                <th scope="col">Sonuç</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <ul class="list-group list-group-flush">
+                        @if (Model.RadyalojiSonucları != null)
+                        {
+                            <table class="table">
+
+                                <tbody>
+                                    <tr>@Model.RadyalojiSonucları.TestAciklama</tr>
+                                    <br />
+
+                                    <tr>@Html.ActionLink("Sonucu Gör", "Index", "Home", null, new { @class = "btn btn-primary btn-sm", href = Model.RadyalojiSonucları.Sonuc })</tr>
+
+
+                                </tbody>
+                            </table>
+                        }
+                        else
+                        {
+                            <p>Sonuç Bulunamadı</p>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

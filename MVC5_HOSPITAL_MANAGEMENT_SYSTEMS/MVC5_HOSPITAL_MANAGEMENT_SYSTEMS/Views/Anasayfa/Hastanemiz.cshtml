@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Hastanemiz";
+    Layout = "~/Views/Shared/_Anasayfa.cshtml";
+}
+
+<div class="container services">
+
+
+
+    <div class="row">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="icon-box">
+                <div class="icon"><i class="fas fa-heartbeat"></i></div>
+                <h4><a href="@Url.Action("Tarihcemiz","Anasayfa")">Tarihçemiz</a></h4>
+                <p>Bartın Devlet Hastanesi, kaliteli hizmet anlayışıyla sağlıkta öncü.</p>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="icon-box">
+                <div class="icon"><i class="fas fa-pills"></i></div>
+                <h4><a href="@Url.Action("KonusmaTerapi","Anasayfa")">Konuşma Terapi</a></h4>
+                <p>Terapi yöntemlerimizle hastalarımıza daha sağlıklı bir yaşam sürmenizi sağlıyoruz.</p>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="icon-box">
+                <div class="icon"><i class="fas fa-hospital-user"></i></div>
+                <h4><a href="@Url.Action("Degerlerimiz","Anasayfa")">Değerlerimiz</a></h4>
+                <p>İlham veren hizmet anlayışımızla Bartın Hastanesi'nde sizlere daima en iyisini sunuyoruz.</p>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+                <div class="icon"><i class="fas fa-dna"></i></div>
+                <h4><a href="@Url.Action("EvdeSaglik","Anasayfa")">Evde Sağlık</a></h4>
+                <p>Sizlere modern ve kaliteli sağlık hizmetleri sunmaktan gurur duyuyoruz.</p>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+                <div class="icon"><i class="fas fa-wheelchair"></i></div>
+                <h4><a href="@Url.Action("Palyatif","Anasayfa")">Palyatif</a></h4>
+                <p>İlham veren hizmet anlayışımızla Bartın Hastanesi'nde sizlere daima en iyisini sunuyoruz.</p>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+                <div class="icon"><i class="fas fa-notes-medical"></i></div>
+                <h4><a href="@Url.Action("Doktorlarimiz","Anasayfa")">Doktorlarımız</a></h4>
+                <p>Hastanemizin deneyimli ve uzman kadrosu sağlık için sizleri bekliyor...</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>

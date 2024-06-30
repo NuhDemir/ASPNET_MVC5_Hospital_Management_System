@@ -1,0 +1,71 @@
+﻿@model IEnumerable<MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.Models.Hasta>
+@{
+    Layout = "~/Views/Shared/_Anasayfa.cshtml";
+    ViewBag.Title = "Randevuları Görüntüle";
+}
+
+
+
+<div class="container mt-5" style="max-width: 1000px; margin: 0 auto; padding-top: 200px; padding-bottom: 100px;">
+    <h2 class="mb-3">Randevular</h2>
+    <p class="text-muted">TC Kimlik numaranızı girerek randevularınızı görüntüleyebilirsiniz.</p>
+
+    @using (Html.BeginForm("RandevuGoster", "Randevu", FormMethod.Get, new { @class = "form-inline mb-3" }))
+    {
+        <div class="form-group mr-2">
+            @Html.Label("TC Kimlik Numarası:", new { @class = "mr-2" })
+            @Html.TextBox("tcKimlik", null, new { @class = "form-control mr-2", required = "required", minlength = "11", maxlength = "11", pattern = "[0-9]{11}", title = "TC Kimlik numarası 11 haneli olmalıdır." })
+            <button type="submit" class="btn btn-primary">Randevuları Görüntüle</button>
+        </div>
+    }
+
+    @if (Model != null && Model.Any())
+    {
+        <table class="table table-hover mt-3">
+            <thead>
+                <tr>
+                    <th>Alış Yarihi</th>
+                    <th>Ad</th>
+                    <th>Soyad</th>
+                    <th>Poliklinik</th>
+                    <th>Doktor</th>
+                    <th>Telefon</th>
+                    <th>Mesaj</th>
+                    <th>Sil</th>
+                    <th>Güncelle</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var randevu in Model)
+                {
+                    <tr>
+                        <td>@Convert.ToDateTime(randevu.AlısTarih).ToString("dd/MM/yyyy")</td>
+                        <td>@Html.DisplayFor(modelItem => randevu.Ad)</td>
+                        <td>@Html.DisplayFor(modelItem => randevu.Soyad)</td>
+                        <td>@Html.DisplayFor(modelItem => randevu.Poliklinik)</td>
+                        <td>@Html.DisplayFor(modelItem => randevu.Doktor)</td>
+                        <td>@Html.DisplayFor(modelItem => randevu.TelefonNo)</td>
+                        <td>@Html.DisplayFor(modelItem => randevu.Mesaj)</td>
+                        <td>
+
+                            @using (Html.BeginForm("RandevuSil", "Randevu", new { id = randevu.HastaID }, FormMethod.Post, new { onsubmit = "return confirm('Bu randevuyu silmek istediğinizden emin misiniz?');" }))
+                            {
+                                <button type="submit" class="btn btn-danger btn-sm">Sil</button>
+                            }
+                        </td>
+                        <td>  @Html.ActionLink("Düzenle", "RandevuDuzenle", new { id = randevu.HastaID }, new { @class = "btn btn-primary btn-sm" })</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p class="text-muted">Randevu bulunamadı veya TC Kimlik numarası yanlış girildi.</p>
+    }
+</div>
+
+
+
+
+

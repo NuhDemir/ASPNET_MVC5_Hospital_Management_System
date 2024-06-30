@@ -1,0 +1,64 @@
+﻿@model MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.Models.Hasta
+@{
+    Layout = "~/Views/Shared/_Anasayfa.cshtml";
+    ViewBag.Title = "Randevu Oluştur";
+}
+
+
+<div class="container mt-5" style="max-width: 1000px; margin: 0 auto; padding-top: 200px; padding-bottom: 100px;">
+    <h2 class="mb-3 text-center">Randevu Oluştur</h2>
+
+    @using (Html.BeginForm("RandevuVer", "Randevu", FormMethod.Post))
+    {
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Ad, "Ad:")
+                    @Html.TextBoxFor(m => m.Ad, new { @class = "form-control", placeholder = "Adınız", required = "required" })
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Soyad, "Soyad:")
+                    @Html.TextBoxFor(m => m.Soyad, new { @class = "form-control", placeholder = "Soyadınız", required = "required" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.TCKNO, "Kimlik Numarası:")
+            @Html.TextBoxFor(m => m.TCKNO, new { @class = "form-control", placeholder = "TC Kimlik Numaranız", required = "required" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.TelefonNo, "Telefon:")
+            @Html.TextBoxFor(m => m.TelefonNo, new { @class = "form-control", placeholder = "Telefon Numaranız", required = "required" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.AlısTarih, "Randevu Tarihi:")
+            @Html.TextBoxFor(m => m.AlısTarih, "{0:yyyy-MM-ddTHH:mm}", new { @class = "form-control", type = "datetime-local", min = DateTime.Now.ToString("yyyy-MM-ddTHH:mm"), required = "required" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Poliklinik, "Poliklinik:")
+            @Html.DropDownListFor(m => m.Poliklinik, (SelectList)ViewBag.poliklinikler, "Bir Bölüm Seçin", new { @class = "form-control", onchange = "this.form.submit();", required = "required" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Doktor, "Doktor:")
+            @Html.DropDownListFor(m => m.Doktor, (SelectList)ViewBag.Doktorlar, "Bir Doktor Seçin", new { @class = "form-control", required = "required" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Mesaj, "Mesaj:")
+            @Html.TextAreaFor(m => m.Mesaj, new { @class = "form-control", placeholder = "Mesajınız (İsteğe Bağlı)", rows = 5 })
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Randevu Oluştur</button>
+        </div>
+    }
+</div>
+
+
+

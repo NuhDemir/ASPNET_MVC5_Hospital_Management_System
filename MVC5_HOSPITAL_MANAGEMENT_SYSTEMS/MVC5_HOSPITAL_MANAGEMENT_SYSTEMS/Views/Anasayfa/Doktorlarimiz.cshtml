@@ -1,0 +1,101 @@
+﻿@using MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.Models
+@model List<Doktor>
+@{
+    ViewBag.Title = "Doktorlarımız";
+    Layout = "~/Views/Shared/_Anasayfa.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doktor</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card {
+            max-width: 400px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .image img {
+            width: 155px;
+            border-radius: 50%;
+        }
+
+        .stats {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid page-body-wrapper">
+        <main class="content-wrapper">
+            <div class="page-header">
+                <h3 class="page-title"> CRUD işlemleri </h3>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Tables</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Basic tables</li>
+                    </ol>
+                </nav>
+            </div>
+            <div style="margin-bottom:25px;"></div>
+            <ul class="navbar-nav w-100">
+                <li class="nav-item w-100">
+                    @using (Html.BeginForm("Doktorlarimiz", "Anasayfa", FormMethod.Get, new { @class = "nav-link mt-2 mt-md-0 d-none d-lg-flex search" }))
+                    {
+                        <div class="input-group">
+                            @Html.TextBox("p", null, new { @class = "form-control form-input", placeholder = "Search anything..." })
+                            <button type="submit" class="btn btn-info">Ara</button>
+                        </div>
+                    }
+                </li>
+            </ul>
+
+            <div class="container mt-5">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+                    @foreach (var d in Model)
+                    {
+                        <div class="col">
+                            <div class="card p-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="image">
+                                        <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" class="rounded" width="155">
+                                    </div>
+                                    <div class="ml-3 w-100">
+                                        <h4 class="mb-0 mt-0">@d.Ad @d.Soyad</h4>
+                                        <span>@d.Poliklinik</span>
+                                        <div class="p-2 mt-2 bg-primary d-flex justify-content-between rounded text-white stats">
+                                            <div class="d-flex flex-column">
+                                                <span class="articles">Sıralama</span>
+                                                <span class="number1">@d.DoktorID</span>
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <span class="followers">Doğu</span>
+                                                <span class="number2">980</span>
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <span class="rating">Rating</span>
+                                                <span class="number3">8.9</span>
+                                            </div>
+                                        </div>
+                                        <div class="button mt-2 d-flex flex-row align-items-center">
+                                            <button class="btn btn-sm btn-outline-primary w-100">Chat</button>
+                                            <button class="btn btn-sm btn-primary w-100 ml-2">Follow</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+        </main>
+    </div>
+</body>
+</html>

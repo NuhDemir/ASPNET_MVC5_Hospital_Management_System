@@ -1,0 +1,115 @@
+﻿@using MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.Models
+@model KanSonucVM
+@{
+    ViewBag.Title = "KanSonucuEkle";
+    Layout = "~/Views/Shared/_Personel.cshtml";
+}
+
+
+
+<h2 class="container display-3">Kan Sonucu Ekle</h2>
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>@Model.Hasta.Ad</th>
+                <th>@Model.Hasta.Soyad</th>
+            </tr>
+        </thead>
+    </table>
+
+    @using (Html.BeginForm())
+    {
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Özellik</th>
+                    <th>Değer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="input-group-text" id="basic-addon1">Demir:</span></td>
+                    <td>@Html.TextBoxFor(x => x.KanSonuc.Demir, new { @class = "form-control", required = "required", type = "number" })</td>
+                    @Html.ValidationMessageFor(model => model.KanSonuc.Demir, "", new { @class = "text-danger" })
+
+                </tr>
+                <tr>
+                    <td><span class="input-group-text" id="basic-addon1">CRP:</span></td>
+                    <td>@Html.TextBoxFor(x => x.KanSonuc.CRP, new { @class = "form-control", required = "required", type = "number" })</td>
+                    @Html.ValidationMessageFor(model => model.KanSonuc.CRP, "", new { @class = "text-danger" })
+
+                </tr>
+                <tr>
+                    <td><span class="input-group-text" id="basic-addon1">Granülosit:</span></td>
+                    <td>@Html.TextBoxFor(x => x.KanSonuc.Granulosit, new { @class = "form-control", required = "required", type = "number" })</td>
+                    @Html.ValidationMessageFor(model => model.KanSonuc.Granulosit, "", new { @class = "text-danger" })
+
+                </tr>
+                <tr>
+                    <td><span class="input-group-text" id="basic-addon1">Lenfosit:</span></td>
+                    <td>@Html.TextBoxFor(x => x.KanSonuc.Lenfosit, new { @class = "form-control", required = "required", type = "number" })</td>
+                    @Html.ValidationMessageFor(model => model.KanSonuc.Lenfosit, "", new { @class = "text-danger" })
+
+                </tr>
+                <tr>
+                    <td><span class="input-group-text" id="basic-addon1">Eritrosit:</span></td>
+                    <td>@Html.TextBoxFor(x => x.KanSonuc.Eritrosit, new { @class = "form-control", required = "required", type = "number" })</td>
+                    @Html.ValidationMessageFor(model => model.KanSonuc.Eritrosit, "", new { @class = "text-danger" })
+
+                </tr>
+                <tr>
+                    <td><span class="input-group-text" id="basic-addon1">Hemoglobin:</span></td>
+                    <td>@Html.TextBoxFor(x => x.KanSonuc.Hemoglobin, new { @class = "form-control", required = "required", type = "number" })</td>
+                    @Html.ValidationMessageFor(model => model.KanSonuc.Hemoglobin, "", new { @class = "text-danger" })
+
+                </tr>
+                <tr>
+                    <td><span class="input-group-text" id="basic-addon1">Hematokrit:</span></td>
+                    <td>@Html.TextBoxFor(x => x.KanSonuc.Hemotokrit, new { @class = "form-control", required = "required", type = "number" })</td>
+                    @Html.ValidationMessageFor(model => model.KanSonuc.Hemotokrit, "", new { @class = "text-danger" })
+
+                </tr>
+                <tr>
+                    <td><span class="input-group-text" id="basic-addon1">Trombosit:</span></td>
+                    <td>@Html.TextBoxFor(x => x.KanSonuc.Trombosit, new { @class = "form-control", required = "required", type = "number" })</td>
+                    @Html.ValidationMessageFor(model => model.KanSonuc.Trombosit, "", new { @class = "text-danger" })
+
+                </tr>
+            </tbody>
+        </table>
+
+        @Html.HiddenFor(x => x.Hasta.HastaID)
+        @Html.HiddenFor(x => x.KanSonuc.KanID)
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Değerleri Kaydet
+        </button>
+        @Html.ActionLink("Geri Dön", "Islem", "PersonelIslem", null, new { @class = "btn btn-warning" })
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Kan Değerlerini Kaydetme</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-bg-danger">
+                            Değerleri Doğru mu Girdiniz !! <br />
+                            Lütfen Kontrol Ediniz
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                        <input type="submit" value="Kaydet" class="btn btn-success" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

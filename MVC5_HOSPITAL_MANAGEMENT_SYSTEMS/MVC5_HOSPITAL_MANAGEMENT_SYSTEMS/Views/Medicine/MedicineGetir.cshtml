@@ -1,0 +1,95 @@
+﻿@model MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.Models.Medicine
+@{
+    ViewBag.Title = "MedicineGetir";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedicineGetir</title>
+</head>
+
+<body>
+    @using (Html.BeginForm("MedicineGuncelle", "Medicine", FormMethod.Post))
+    {
+        <div style="margin-bottom:15px"></div>
+        <main class="container-fluid p-0">
+            <!--BAŞLIK-->
+            <div class="mb-3">
+                <h1 class="h2 d-inline align-middle" style="color:antiquewhite">İLAÇ GÜNCELLE</h1>
+            </div>
+            <!--MEDİCİNE ID-->
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">İLAÇ ID</h5>
+                        </div>
+                        <!--INPUT-->
+                        <div class="card-body">
+                            @Html.LabelFor(med => med.MedicineID)
+                            @Html.TextBoxFor(med => med.MedicineID, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--İLAÇ ADI-->
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">İLAÇ ADI</h5>
+                        </div>
+                        <!--INPUT-->
+                        <div class="card-body">
+                            @Html.LabelFor(med => med.Ad)
+                            @Html.TextBoxFor(med => med.Ad, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--İLAÇ KODU-->
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">İLAÇ KODU</h5>
+                        </div>
+                        <!--INPUT-->
+                        <div class="card-body">
+                            @Html.LabelFor(med => med.Ad)
+                            @Html.TextBoxFor(med => med.Ad, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--İLAÇ GRUBU-->
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">İLAÇ GRUBU</h5>
+                        </div>
+                        <!--INPUT-->
+                        <div class="card-body">
+                            @Html.LabelFor(med => med.Grup)
+                            @Html.TextBoxFor(med => med.Grup, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-warning">Güncelle</button>
+            </div>
+
+        </main>
+    }
+</body>
+
+</html>

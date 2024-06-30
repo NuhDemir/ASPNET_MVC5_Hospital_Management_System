@@ -1,0 +1,45 @@
+﻿@model MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.Models.Hasta
+@{
+    Layout = "~/Views/Shared/_Anasayfa.cshtml";
+    ViewBag.Title = "Randevu Onay";
+}
+
+
+<div class="container mt-5" style="max-width: 1000px; margin: 0 auto; padding-top: 200px; padding-bottom: 100px;">
+    <div class="alert alert-success text-center" role="alert">
+        Randevunuz başarıyla kaydedilmiştir. Randevunuzda değişiklik yapmak isterseniz <a href="@Url.Action("RandevuGoster")" class="alert-link">buraya</a> tıklayın.
+    </div>
+    <div class="form-group">
+        <label>TC Kimlik Numarası:</label>
+        <p class="form-control-static">@Html.DisplayFor(model => model.TCKNO)</p>
+    </div>
+    <div class="form-group">
+        <label>Ad:</label>
+        <p class="form-control-static">@Html.DisplayFor(model => model.Ad)</p>
+    </div>
+    <div class="form-group">
+        <label>Soyad:</label>
+        <p class="form-control-static">@Html.DisplayFor(model => model.Soyad)</p>
+    </div>
+    <div class="form-group">
+        <label>Bölüm:</label>
+        <p class="form-control-static">@Html.DisplayFor(model => model.Poliklinik)</p>
+    </div>
+    <div class="form-group">
+        <label>Doktor:</label>
+        <p class="form-control-static">@Html.DisplayFor(model => model.Doktor)</p>
+    </div>
+    <div class="form-group">
+        <label>Mesaj:</label>
+        <p class="form-control-static">@Html.DisplayFor(model => model.Mesaj)</p>
+    </div>
+    <div class="form-group">
+        <label>Tarih:</label>
+        <p class="form-control-static">@Html.DisplayFor(model => model.AlısTarih)</p>
+    </div>
+    <div class="form-group">
+        <label>Telefon:</label>
+        <p class="form-control-static">@Html.DisplayFor(model => model.TelefonNo)</p>
+    </div>
+</div>
+

@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Anasayfa.cshtml";
+
+}
+
+
+
+<section id="services" class="services">
+    <div class="container-fluid">
+
+
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch  mt-4">
+                <div class="icon-box">
+                    <div class="icon"><i class="fas fa-person-arrow-down-to-line"></i></div>
+                    @Html.ActionLink("Doktor Giriş Sayfası", "DoktorGiris", "Login", null)
+                    <p>Bartın Devlet Hastanesi, kaliteli hizmet anlayışıyla sağlık alanında öncü olmaya devam ediyor.</p>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch  mt-4">
+                <div class="icon-box">
+                    <div class="icon"><i class="fas fa-person-arrow-up-from-line"></i></div>
+                    @Html.ActionLink("Personal Giriş Sayfası", "PersonelGiris", "Login", null)
+
+                    <p>Bartın Devlet Hastanesi, kaliteli hizmet anlayışıyla sağlık alanında öncü olmaya devam ediyor.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

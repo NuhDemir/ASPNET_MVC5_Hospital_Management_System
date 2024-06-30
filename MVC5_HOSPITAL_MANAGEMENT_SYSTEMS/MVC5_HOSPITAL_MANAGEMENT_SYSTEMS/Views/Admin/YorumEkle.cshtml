@@ -1,0 +1,52 @@
+﻿@model MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.Models.Yorum
+@{
+    ViewBag.Title = "YorumEkle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+
+<link href="~/Content/assets/vendors/select2-bootstrap-theme/select2-bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/assets/vendors/select2/select2.min.css" rel="stylesheet" />
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Yorum Ekleme Formu</h4>
+            <p class="card-description">Gerekli bilgileri giriniz... </p>
+
+            @using (Html.BeginForm("YorumEkle", "Admin", FormMethod.Post@*new {enctype = "multipart/form-data"}*@))
+{
+        <form class="forms-sample">
+
+            <div class="form-group">
+                <label for="Ad">Adı</label>
+                @Html.TextBoxFor(y => y.Ad, new { @class = "form-control" })
+                @Html.ValidationMessageFor(y => y.Ad)
+            </div>
+
+
+            <div class="form-group">
+                <label for="Soyadı">Soyadı</label>
+                @Html.TextBoxFor(y => y.Soyad, new { @class = "form-control" })
+                @Html.ValidationMessageFor(y => y.Soyad)
+            </div>
+
+            <div class="form-group">
+                <label for="Meslek">Meslek</label>
+                @Html.TextBoxFor(y => y.Meslek, new { @class = "form-control" })
+                @Html.ValidationMessageFor(y => y.Meslek)
+            </div>
+
+            <div class="form-group">
+                <label for="Mesaj">Mesaj</label>
+                @Html.TextBoxFor(y => y.Mesaj, new { @class = "form-control" })
+                @Html.ValidationMessageFor(y => y.Mesaj)
+            </div>
+
+            <button type="submit" class="btn btn-primary mr-2">Yorum Ekle</button>
+            @Html.ActionLink("Cancel", "Yorum", "Admin", null, new { @class = "btn btn-dark" })
+        </form>
+}
+        </div>
+    </div>
+</div>

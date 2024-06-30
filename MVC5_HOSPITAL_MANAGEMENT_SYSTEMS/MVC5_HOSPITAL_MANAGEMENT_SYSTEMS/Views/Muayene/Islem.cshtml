@@ -1,0 +1,56 @@
+﻿@using MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.Models
+@model List<Hasta>
+@{
+    ViewBag.Title = "Islem";
+    Layout = "~/Views/Shared/_Personel.cshtml";
+
+}
+
+<br />
+<br />
+<h2 class="display-3 container">İşlem</h2>
+
+<div class="container table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+
+                <th scope="col">Adı</th>
+                <th scope="col">Soyadı</th>
+                <th scope="col">Şikayeti</th>
+                <th class="text-end" scope="col">Sonuc</th>
+                <th class="text-end" scope="col">Recete Yaz</th>
+                <th class="text-end" scope="col">Recete Yazdır</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                
+                if (item.AlısTarih.Date.Day == DateTime.Now.Day)
+                {
+                    <tr>
+
+
+                        <td>@item.Ad</td>
+                        <td>@item.Soyad</td>
+                        <td>@item.Mesaj</td>
+                        <td class="text-end">
+                            @Html.ActionLink("Sonuc Goster", "Sonuc", "Muayene", new { id = item.HastaID }, new { @class = "btn btn-primary btn-sm" })
+
+                        </td>
+                        <td class="text-end">
+                            @Html.ActionLink("Recete Yaz", "Recete", "Muayene", new { id = item.HastaID }, new { @class = "btn btn-primary btn-sm" })
+                        </td>
+                        <td class="text-end">
+                            @Html.ActionLink("Yazdır", "ReceteYazdır", "Muayene", new { id = item.HastaID }, new { @class = "btn btn-primary btn-sm" })
+
+                        </td>
+                    </tr>
+                }
+
+            }
+        </tbody>
+    </table>
+</div>
