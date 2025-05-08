@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Demir\\Documents\\GitHub\\ASPNET_MVC5_Hospital_Management_System\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{091F2B81-BE57-41EE-914C-CC0E7D36666E}|MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.csproj|c:\\users\\demir\\documents\\github\\aspnet_mvc5_hospital_management_system\\mvc5_hospital_management_systems\\mvc5_hospital_management_systems\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{091F2B81-BE57-41EE-914C-CC0E7D36666E}|MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.csproj|solutionrelative:mvc5_hospital_management_systems\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{091F2B81-BE57-41EE-914C-CC0E7D36666E}|MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.csproj|c:\\users\\demir\\documents\\github\\aspnet_mvc5_hospital_management_system\\mvc5_hospital_management_systems\\mvc5_hospital_management_systems\\views\\admin\\yapilacaklar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{091F2B81-BE57-41EE-914C-CC0E7D36666E}|MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.csproj|solutionrelative:mvc5_hospital_management_systems\\views\\admin\\yapilacaklar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{091F2B81-BE57-41EE-914C-CC0E7D36666E}|MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.csproj|c:\\users\\demir\\documents\\github\\aspnet_mvc5_hospital_management_system\\mvc5_hospital_management_systems\\mvc5_hospital_management_systems\\views\\admin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{091F2B81-BE57-41EE-914C-CC0E7D36666E}|MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.csproj|solutionrelative:mvc5_hospital_management_systems\\views\\admin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{091F2B81-BE57-41EE-914C-CC0E7D36666E}|MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.csproj|c:\\users\\demir\\documents\\github\\aspnet_mvc5_hospital_management_system\\mvc5_hospital_management_systems\\mvc5_hospital_management_systems\\views\\admin\\map.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{091F2B81-BE57-41EE-914C-CC0E7D36666E}|MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.csproj|solutionrelative:mvc5_hospital_management_systems\\views\\admin\\map.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{091F2B81-BE57-41EE-914C-CC0E7D36666E}|MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.csproj|c:\\users\\demir\\documents\\github\\aspnet_mvc5_hospital_management_system\\mvc5_hospital_management_systems\\mvc5_hospital_management_systems\\views\\admin\\anasayfa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{091F2B81-BE57-41EE-914C-CC0E7D36666E}|MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.csproj|solutionrelative:mvc5_hospital_management_systems\\views\\admin\\anasayfa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{091F2B81-BE57-41EE-914C-CC0E7D36666E}|MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.csproj|c:\\users\\demir\\documents\\github\\aspnet_mvc5_hospital_management_system\\mvc5_hospital_management_systems\\mvc5_hospital_management_systems\\views\\anasayfa\\anasayfa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{091F2B81-BE57-41EE-914C-CC0E7D36666E}|MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS.csproj|solutionrelative:mvc5_hospital_management_systems\\views\\anasayfa\\anasayfa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Demir\\Documents\\GitHub\\ASPNET_MVC5_Hospital_Management_System\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\Views\\Admin\\Login.cshtml",
+              "RelativeDocumentMoniker": "MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\Views\\Admin\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Demir\\Documents\\GitHub\\ASPNET_MVC5_Hospital_Management_System\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\Views\\Admin\\Login.cshtml",
+              "RelativeToolTip": "MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\Views\\Admin\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-18T10:08:47.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\Demir\\Documents\\GitHub\\ASPNET_MVC5_Hospital_Management_System\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\Views\\Admin\\Dashboard.cshtml",
+              "ToolTip": "C:\\Users\\Demir\\Documents\\GitHub\\ASPNET_MVC5_Hospital_Management_System\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeToolTip": "MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\Views\\Admin\\Dashboard.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-18T10:08:14.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Yapilacaklar.cshtml",
+              "DocumentMoniker": "C:\\Users\\Demir\\Documents\\GitHub\\ASPNET_MVC5_Hospital_Management_System\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\Views\\Admin\\Yapilacaklar.cshtml",
+              "RelativeDocumentMoniker": "MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\Views\\Admin\\Yapilacaklar.cshtml",
+              "ToolTip": "C:\\Users\\Demir\\Documents\\GitHub\\ASPNET_MVC5_Hospital_Management_System\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\Views\\Admin\\Yapilacaklar.cshtml",
+              "RelativeToolTip": "MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\Views\\Admin\\Yapilacaklar.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-18T10:09:10.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Map.cshtml",
+              "DocumentMoniker": "C:\\Users\\Demir\\Documents\\GitHub\\ASPNET_MVC5_Hospital_Management_System\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\Views\\Admin\\Map.cshtml",
+              "RelativeDocumentMoniker": "MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\Views\\Admin\\Map.cshtml",
+              "ToolTip": "C:\\Users\\Demir\\Documents\\GitHub\\ASPNET_MVC5_Hospital_Management_System\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\Views\\Admin\\Map.cshtml",
+              "RelativeToolTip": "MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\Views\\Admin\\Map.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-18T10:09:11.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Anasayfa.cshtml",
+              "DocumentMoniker": "C:\\Users\\Demir\\Documents\\GitHub\\ASPNET_MVC5_Hospital_Management_System\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\Views\\Admin\\Anasayfa.cshtml",
+              "RelativeDocumentMoniker": "MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\Views\\Admin\\Anasayfa.cshtml",
+              "ToolTip": "C:\\Users\\Demir\\Documents\\GitHub\\ASPNET_MVC5_Hospital_Management_System\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\Views\\Admin\\Anasayfa.cshtml",
+              "RelativeToolTip": "MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\Views\\Admin\\Anasayfa.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-18T10:06:32.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Anasayfa.cshtml",
+              "DocumentMoniker": "C:\\Users\\Demir\\Documents\\GitHub\\ASPNET_MVC5_Hospital_Management_System\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\Views\\Anasayfa\\Anasayfa.cshtml",
+              "RelativeDocumentMoniker": "MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\Views\\Anasayfa\\Anasayfa.cshtml",
+              "ToolTip": "C:\\Users\\Demir\\Documents\\GitHub\\ASPNET_MVC5_Hospital_Management_System\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\Views\\Anasayfa\\Anasayfa.cshtml",
+              "RelativeToolTip": "MVC5_HOSPITAL_MANAGEMENT_SYSTEMS\\Views\\Anasayfa\\Anasayfa.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-18T10:06:27.802Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
