@@ -1,4 +1,3 @@
-Harika bir ASP.NET MVC projesi! İşte bu "Hastane Yönetim Sistemi" projesi için profesyonel bir Markdown dokümantasyonu. Bu doküman, projenin yapısını, özelliklerini ve teknik detaylarını özetlemektedir.
 
 ---
 
